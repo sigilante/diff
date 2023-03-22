@@ -1,4 +1,4 @@
-#   `%lcs`
+#   `%diff`
 
 A [diff](https://en.wikipedia.org/wiki/Diff) is a data comparison showing the differences between two data structures, typically files.  The basic diff algorithm uses the concept of a [_longest common subsequence_](https://rosettacode.org/wiki/Longest_common_subsequence) (LCS), typically over lines.  (We will retain operations over lines for simplicity of output, but there could be good reasons for analyzing per character instead.)
 
