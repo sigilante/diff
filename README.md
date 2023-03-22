@@ -6,8 +6,6 @@ A [diff](https://en.wikipedia.org/wiki/Diff) is a data comparison showing the di
 
 Here the longest common subsequence is `this is changed` and other text represents deletions or interpolations.
 
-This algorithm returns the longest common subsequence in reverse order.
-
 Our proof-of-concept algorithm will not be the most efficient solution.
 
 1. Retrieve each base text (there should be two).  (Convert `cord` to `tape` using `++crip`.)

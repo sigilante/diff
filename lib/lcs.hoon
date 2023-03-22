@@ -9,7 +9,7 @@
   $(lines (snoc lines (scag (need idx) tape)), tape (slag +((need idx)) tape))
 ++  lcs
   ::  bit of a joke:  X-tudo is a cheeseburger w/ everything in Brazil
-  !:  |=  [xtudo=wall ytudo=wall]
+  |=  [xtudo=wall ytudo=wall]
   ^-  wall
   ::  if no lines left, return
   ?~  xtudo   *wall
@@ -22,7 +22,7 @@
   =/  xtail=wall   (slag 1 `wall`xtudo)
   =/  ytail=wall   (slag 1 `wall`ytudo)
   ?:  =(xhead yhead)
-    (snoc $(xtudo xtail, ytudo ytail) xhead)
+    (weld ~[xhead] $(xtudo xtail, ytudo ytail))
   =/  xhead-ytail  $(ytudo ytail)
   =/  yhead-xtail  $(xtudo xtail)
   ?:  (gth (lent xhead-ytail) (lent yhead-xtail))
