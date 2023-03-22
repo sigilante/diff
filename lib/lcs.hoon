@@ -28,5 +28,32 @@
   ?:  (gth (lent xhead-ytail) (lent yhead-xtail))
     xhead-ytail
   yhead-xtail
++$  op  ?(%d %a %$)
+++  left-hand   :: deletions
+  |=  [x=wall lcs=wall]
+  =|  lines=((mop @ud op) gth)
+  =/  on  ((on @ud op) gth)
+  =/  idx  0
+  =/  ids  0
+  |-  ^+  lines
+  ?:  =((lent x) idx)  lines
+  ?:  =((snag idx x) (snag ids lcs))
+    :: same in both
+    $(idx +(idx), ids +(ids), lines (put:on lines idx %$))
+  :: not found in lcs
+  $(idx +(idx), lines (put:on lines idx %d))
+++  right-hand  ::  additions
+  |=  [lcs=wall y=wall]
+  =|  lines=((mop @ud op) gth)
+  =/  on  ((on @ud op) gth)
+  =/  idy  0
+  =/  ids  0
+  |-  ^+  lines
+  ?:  =((lent y) idy)  lines
+  ?:  =((snag idy y) (snag ids lcs))
+    :: same in both
+    $(idy +(idy), ids +(ids), lines (put:on lines idy %$))
+  :: not found in lcs
+  $(idy +(idy), lines (put:on lines idy %a))
 --
 
