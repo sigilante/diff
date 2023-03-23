@@ -1,5 +1,7 @@
 #   `%diff`
 
+(Considered complete and functional, ~2023.3.22.)
+
 A [diff](https://en.wikipedia.org/wiki/Diff) is a data comparison showing the differences between two data structures, typically files.  The basic diff algorithm uses the concept of a [_longest common subsequence_](https://rosettacode.org/wiki/Longest_common_subsequence) (LCS), typically over lines.  (We will retain operations over lines for simplicity of output, but there could be good reasons for analyzing per character instead.)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Nubio_Diff_Screenshot3.png/330px-Nubio_Diff_Screenshot3.png)
@@ -13,4 +15,3 @@ Our proof-of-concept algorithm will not be the most efficient solution.
 3. Recursively check if we are at the end of either sequence; if so, return nothing (to add).
 4. Otherwise, if the first elements match, append the head to the LCS and continue to calculate at #3.
 5. If the first elements don't match, then we try both possible sequences from this point forward at #3.
-
